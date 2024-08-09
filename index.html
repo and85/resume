@@ -1,78 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <title>My CV!</title>
-    <meta name="keywords" content="html, course, css, tags">
-    <meta name="description" content="Andrii, Tkach, resume, cv">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="tkach, cv, resume">
+  <meta name="description" content="Это сайт - резюме Андрея Ткача">
+  <title>Andrii Tkach Resume</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <img src="MyPhoto.jpg" width="150" alt="Мое фото">
-    <h1>Андрей Ткач</h1>
-    <p>Я решил изучать <strong>фронтенд</strong>, потому как на <em>рынке труда</em> все хотят <strong>FullStack</strong> разработчиков.</p>            
-    <p>Я люблю программировать и своего кота по кличке <strong>Элвис.</strong></p>
-    <h4>Список социальных сетей:</h4>    
-    <a href="https://www.facebook.com/andrii.tkach.9" target="_blank">Facebook*</a> |
-    <a href="https://leetcode.com/u/and85/" target="_blank">Leetcode</a> |
-    <a href="https://github.com/and85" target="_blank">Github</a>    
-    
-    <h2>Мои хобби</h2>    
-    <ol>
-        <li>Путешевствия</li>
-        <li>Блогинг</li>
-        <li>Горные лыжи</li>
-        <li>MMA</li>
-    </ol>
+  <div class="container">
+    <div class="info">
+      <img src="avatar.jpg" alt="Андрей Ткач" class="avatar">
 
-    <h2>Опыт работы</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Название</th>
-                <th>Должность</th>
-                <th>Год</th>
-            </tr>
-        </thead>
+      <div class="info-text">
+        <h1>Андрей Ткач</h1>
+
+        <p class="green">Я решил изучать <strong class="red">фронтенд</strong>, так как на рынке труда все хотят <strong>фулстек</strong> разработчиков</p>
+
+        <p>Я люблю <em>путешествовать, заниматься спортом и программировать</em></p>
+
+        <h4 class="blue">Список социальных сетей:</h4>
+
+        <a href="https://www.facebook.com/andrii.tkach.9" target="_blank">Facebook</a>
+        |
+        <a href="https://github.com/and85" target="_blank">github</a>
+        |
+        <a href="https://leetcode.com/u/and85/" target="_blank">leetcode</a>
+      </div>
+    </div>
+
+    <div class="card bg-green">
+      <h2>Мои хобби</h2>
+
+      <ol class="list blue">
+        <li>Путешествия</li>    
+        <li>Бокс</li>
+        <li>Футбол</li>
+      </ol>
+    </div>
+
+    <div class="card bg-red">
+      <h2>Опыт работы</h2>
+
+      <table class="table">
+        <!-- <thead>
+          <tr>
+            <th>Название</th>
+            <th>Должность</th>
+            <th>Год</th>
+          </tr>
+        </thead> -->
         <tbody>
-            <tr>
-                <td>Люксофт</td>
-                <td>Senior Software Developer</td>
-                <td>2011-2023</td>
-            </tr>
-            <tr>
-                <td>Volvo</td>
-                <td>Senior Software Developer</td>
-                <td>2023-2024</td>
-            </tr>
-            <tr>
-                <td>Appfire</td>
-                <td>.NET Backend Developer</td>
-                <td>2024-по н.вр.</td>
-            </tr>
+          <tr>
+            <td>Luxoft</td>
+            <td>Senior .NET developer</td>
+            <td>2011-2023</td>
+          </tr>
+          <tr>
+            <td>Volvo</td>
+            <td>Senior .NET developer</td>
+            <td>2023-2024</td>
+          </tr>
+          <tr>
+            <td>Appfire</td>
+            <td>.NET Backend developer</td>
+            <td>2024-настоящие время</td>
+          </tr>      
         </tbody>
-    </table>
+      </table>
+    </div>  
 
-    <h2>Связаться со мной</h2>
-    <form action="/">
-        <div>
-            <label for="name">Ваше имя:</label>
-            <input type="text" id="name" placeholder="Введите имя">
+    <div class="card bg-yellow">
+      <h2>Мои курсы</h2>
+
+      <ul class="link-list">
+        <li>Профессия Джуниор Frontend-разработчик</li>    
+        <li>Все курсы</li>    
+      </ul>
+    </div>
+
+    <form action="/" class="form">
+      <h2>Связаться со мной</h2>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Ваше имя:</label>
+          <input type="text" id="name" placeholder="Введите имя">
         </div>
-        <div>
-            <label for="email">Ваш email:</label>
-            <input type="email" id="email" placeholder="Введите email">
+
+        <div class="form-group">
+          <label for="email">Ваш email:</label>
+          <input type="email" id="email" placeholder="Введите email">
         </div>
-        <div>
-            <label for="message">Ваше сообщение:</label>
-            <br>
-            <textarea id="message" cols="32" rows="5" placeholder="Введите сообщение..."></textarea>
-        </div>
-        <button type="submit">Отправить</button>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Ваше сообщение:</label>
+        <br>
+        <textarea id="message" cols="20" rows="5" placeholder="Введите сообщение..."></textarea>
+      </div>
+
+      <!-- <input type="submit" value="Отправить!"> -->
+      <button class="btn">Отправить!</button>
     </form>
 
     <br>
-    <hr>
-    <p><small>*Просто хотел испытать тег small</small></p>
+    <br>
+    <br>
+    <br>
+    <br>
+  </div>
 </body>
 </html>
